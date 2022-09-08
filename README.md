@@ -63,7 +63,7 @@ if ($checkout) {
 Передача номенклатуры и номера заказа
 ---------
 
-Данные передаются с помощью переменной, в которую помещается JSON со значениями InvoiceId(номер заказа) и Receipt[(номенклатура согласно документации Robokassa)](https://docs.robokassa.ru/fiscalization/)
+Данные передаются с помощью переменной provider_data, в которую помещается JSON со значениями InvoiceId(номер заказа) и Receipt[(номенклатура согласно документации Robokassa)](https://docs.robokassa.ru/fiscalization/)
 
 Использование бота
 ---------
