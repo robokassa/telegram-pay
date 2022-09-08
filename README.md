@@ -56,3 +56,9 @@ if ($checkout) {
     $content = array('chat_id' => $chat_id, 'text' => 'Successful payment');
     $bot->sendMessage($content);
 }
+```
+
+Передача номенклатуры и номера заказа
+---------
+
+Данные передаются с помощью переменной, в которую помещается JSON со значениями InvoiceId(номер заказа) и Receipt[(номенклатура согласно документации Robokassa)](https://docs.robokassa.ru/fiscalization/)
