@@ -1,4 +1,4 @@
-# telegram-pay
+# Robokassa Telegram Pay
 
 Требования
 ---------
