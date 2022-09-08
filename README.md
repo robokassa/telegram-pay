@@ -5,7 +5,7 @@
 
 * PHP >= 5.3
 * CURL должен установлен на сервере
-* Ключ Telegram API, вы можете получить его в[ @BotFather ](https://core.telegram.org/bots#botfather) с помощью простых команд сразу после создания бота.
+* Ключ Telegram API, вы можете получить его в[ @BotFather ](https://core.telegram.org/bots#botfather) после создания бота.
 
 Для вебхука:
 * ДЕЙСТВУЮЩИЙ SSL-сертификат (требуется Telegram API). Вы можете использовать [ бесплатный гибкий SSL Cloudflare ] (https://www.cloudflare.com/ssl), который шифрует веб-трафик от конечных пользователей до их прокси-серверов, если вы используете CloudFlare DNS.    
