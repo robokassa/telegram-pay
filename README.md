@@ -43,13 +43,15 @@ $invoice = array(
     'provider_token' => '11111111111:LIVE:637955761195928888', //токен выданный через бот Robokassa
     'currency' => 'RUB',
     'prices' => json_encode((array($labeled))),
-    'provider_data' => '{"InvoiceId":100,"Receipt":{"sno":"osn","items":[{"name":"Товар","quantity":1,"sum":100,"tax":"vat110","payment_method":"full_payment","payment_object":"commodity","nomenclature_code":"123456"}]}}');
+    'provider_data' => '{"InvoiceId":100,"Receipt":{"sno":"osn","items":[{"name":"Товар","quantity":1,"sum":100,"tax":"vat110","payment_method":"full_payment","payment_object":"commodity","nomenclature_code":"123456"}]}}'); //номер заказа и товарная номенклатура
 
+//команда /pay для вызова sendInvoice
 if (trim($data['message']['text']) == '/pay') {
     $bot->sendInvoice($invoice);
 }
 
 if ($checkout) {
+//получаем webhook с Update, который содержит объект PreCheckoutQuery, после чего вызываем метод answerPreCheckoutQuery
     $content = array('pre_checkout_query_id' => $checkout, 'ok' => true);
     $bot->answerPrecheckoutQuery($content);
 } else if ($success) {
@@ -62,3 +64,11 @@ if ($checkout) {
 ---------
 
 Данные передаются с помощью переменной, в которую помещается JSON со значениями InvoiceId(номер заказа) и Receipt[(номенклатура согласно документации Robokassa)](https://docs.robokassa.ru/fiscalization/)
+
+Использование бота
+---------
+
+При корректной установке и настройке бота, ваш бот должен отзываться на команду /pay следующим образом
+![image](https://user-images.githubusercontent.com/73853919/189113280-2b7a204d-bcfb-42de-963e-32755f194f24.png)
+
+
