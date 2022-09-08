@@ -14,3 +14,9 @@
 ---------
 
 Скопируйте Telegram.php и bot.php на ваш сервер
+
+Активация WebHook Telegram
+---------
+
+Укажите токен вашего бота и адрес bot.php на сервере и перейдите по адресу https://api.telegram.org/bot(BOT_TOKEN)/setWebhook?url=https://yoursite.com/bot.php
+ 
