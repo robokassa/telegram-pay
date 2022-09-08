@@ -4,7 +4,7 @@
 ---------
 
 * PHP >= 5.3
-* CURL должен установлен на сервере.
+* Curl
 * Ключ Telegram API, вы можете получить его в[ @BotFather ](https://core.telegram.org/bots#botfather) после создания бота.
 
 Для вебхука:
